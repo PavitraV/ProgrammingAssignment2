@@ -8,13 +8,9 @@ makeCacheMatrix <- function(x = matrix()) {
     # new value of matrix is assigned. flush cache. set to NULL
     cache <<- NULL
   }
-  get <- function()
-    {
-    x}
-  setinverse <- function(solve) {
-    cache <<- solve}
-  getinverse <- function() {
-    cache}
+  get <- function() x
+  setinverse <- function(solve) cache <<- solve
+  getinverse <- function() cache
   list(set = set, get = get,
        setinverse = setinverse,
        getinverse = getinverse)
